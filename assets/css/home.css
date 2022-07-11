@@ -1,0 +1,109 @@
+/* main body part */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #b2cccc;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+ }
+ 
+  /* heading style */
+ #page-heading {
+     text-align: center;
+     margin-top: 25px;
+     color: rgb(50, 55, 55);
+ }
+
+ #todo-list-block{
+     background-color: whitesmoke;
+ }
+
+ #todo-list-container ul{
+    padding: 0;
+    list-style:none;
+    }
+ 
+.todo-form{
+border: 2px, solid black;
+    }
+
+     /* button style for add and delete */
+    .todo-form  button{
+        cursor: pointer;
+        height: 43px;
+        width: 160px;
+        color: white;
+        font-size: 17px;
+            }
+
+        .buttons{
+            display: flex;
+    justify-content: center;
+    margin: 15px;
+        }
+
+          /* style for add button */
+.add{
+background-color: red;
+}
+.fa-plus{
+color: white;
+}
+
+  /* style for delete button */
+.delete{
+background-color: black;
+
+}
+.fa-trash-can{
+color: white;
+}
+
+
+form{
+    display: grid;
+}
+
+    /* for all li elements */
+#list-items{
+    padding: 5px;
+    border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: solid #eeeeee 1px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#description{
+text-align: left;
+}
+
+#date{
+text-align: left;
+}
+
+#category{
+    border: 1px solid blue;
+    background-color: red;
+    background-image: linear-gradient(#1090b8, #a45d5d);
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.text-line{
+    background-color: transparent;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: solid #eeeeee 1px;
+padding: 3px 10px;
+}
+
+.category-date{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}

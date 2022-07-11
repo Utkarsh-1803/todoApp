@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> 
+        <%= title %> 
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://kit.fontawesome.com/606c973623.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <h1 id="page-heading"> 
+        <i class="fa-solid fa-book"></i>
+        TODO App
+    </h1>
+
+<!-- form to create task -->
+
+<div class="todo-form">
+    <form action="/create-todo" method="POST">
+        <label>Description</label>
+        <input class= "text-line" type="text" name="description" placeholder="What do you need to do?" required>
+<div class="category-date">
+        <label for="category">Category</label>
+        <select name="category" class= "text-line" required>
+            <option value="">Choose a Category</option>
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="general">General</option>
+        </select>
+
+        <label>Due Date</label>
+        <input class= "text-line" type="date" name="date" value="" required>
+    </div>
+<div class="buttons">
+ <button type="submit" class="add"><i class="fa-solid fa-plus"></i> Add Task</button>
+</div>
+        </form>
+</div>
+
+
+
+
+<form action="/delete-tasks" method="GET">
+<div id="todo-list-container">
+    <ul>
+        <% for(let i of todo_list){ %>
+            <li id="list-items">
+                <input type="checkbox" name="<%= i._id %>">
+                <p id="description"><%= i.description %></p>
+                <p id="date"><%= i.date %></p>
+                <p id="category"><%= i.category %></p>
+        </li>
+            <%}%>
+        </ul>
+        <div class="todo-form">
+         <div class="buttons">
+    <button type="submit" action = "/delete-tasks" class="delete"><i class="fa-solid fa-trash-can"></i> Delete Tasks</button>
+</div>
+</div>   
+</div>
+</form>
+
+
+
+
+
+</body>
+</html>
